@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "Leonard Holter",
     images: [
       {
-        url: "/leonard.jpeg",
+        url: "/leonard-holter.jpg",
         width: 800,
         height: 800,
         alt: "Leonard Holter",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "Leonard Holter",
     description:
       "Founder & Chairman of Holter Holdings. Buying great businesses, quietly.",
-    images: ["/leonard.jpeg"],
+    images: ["/leonard-holter.jpg"],
   },
   alternates: {
     canonical: "https://leonardholter.com",
@@ -78,7 +78,7 @@ const jsonLd = {
   description:
     "Founder and Chairman of Holter Holdings, acquiring small profitable businesses for the long term.",
   url: "https://leonardholter.com",
-  image: "https://leonardholter.com/leonard.jpeg",
+  image: "https://leonardholter.com/leonard-holter.jpg",
   jobTitle: "Founder & Chairman",
   worksFor: {
     "@type": "Organization",
@@ -251,7 +251,7 @@ export default function Page() {
         <section className="hero" aria-labelledby="headline">
           <div className="portrait">
             <Image
-              src="/leonard.jpeg"
+              src="/leonard-holter.jpg"
               alt="Leonard Holter, Founder and Chairman of Holter Holdings"
               fill
               style={{ objectFit: "cover" }}

@@ -214,6 +214,88 @@ export default function Page() {
         }
         .about p:last-child { margin-bottom: 0; }
 
+        .books-section {
+          padding: 64px 0 48px;
+        }
+        .books-header {
+          font-family: var(--serif);
+          font-weight: 400;
+          font-size: clamp(36px, 5vw, 56px);
+          line-height: 1.1;
+          letter-spacing: -0.01em;
+          margin: 0 0 32px;
+        }
+        .book-badge {
+          font-family: var(--sans);
+          font-size: 11px;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          background: #f5dfa0;
+          color: var(--ink);
+          padding: 4px 12px;
+          border-radius: 999px;
+          margin-bottom: 16px;
+        }
+        .books-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+        .book-card {
+          background: #ece8dd;
+          border-radius: 12px;
+          padding: 40px 28px 32px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .book-cover {
+          width: 140px;
+          height: 200px;
+          border-radius: 4px;
+          overflow: hidden;
+          position: relative;
+          margin-bottom: 20px;
+          box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+          flex-shrink: 0;
+        }
+        .book-title {
+          font-family: var(--serif);
+          font-size: 18px;
+          line-height: 1.35;
+          font-weight: 500;
+          margin: 0 0 16px;
+          color: var(--ink);
+        }
+        .book-link {
+          font-family: var(--sans);
+          font-size: 13px;
+          letter-spacing: 0.04em;
+          color: var(--ink);
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          border-bottom: 1px solid var(--ink);
+          padding-bottom: 1px;
+          transition: opacity 200ms ease;
+        }
+        .book-link:hover { opacity: 0.6; }
+
+        @media (max-width: 900px) {
+          .books-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        @media (max-width: 560px) {
+          .books-grid {
+            grid-template-columns: 1fr;
+          }
+          .books-section { padding: 48px 0 36px; }
+          .book-cover { width: 120px; height: 170px; }
+        }
+
         footer {
           padding-top: 48px;
           display: flex;
@@ -302,6 +384,25 @@ export default function Page() {
               , where we acquire small, profitable businesses and hold them for
               the long term.
             </p>
+          </div>
+        </section>
+
+        <hr className="rule" />
+
+        <section className="books-section" aria-label="Recent Books">
+          <h2 className="books-header">Recent Books</h2>
+          <div className="books-grid">
+            <div className="book-card">
+              <div className="book-badge">Currently Reading</div>
+              <div className="book-cover" style={{ background: "#1a2332", display: "flex", alignItems: "center", justifyContent: "center", padding: 12 }}>
+                <span style={{ color: "#c4a44a", fontFamily: "var(--serif)", fontSize: 13, lineHeight: 1.3, textAlign: "center", fontWeight: 500 }}>
+                  Berkshire Hathaway<br />Letters to<br />Shareholders<br /><span style={{ fontSize: 10, opacity: 0.7 }}>1965–2024</span>
+                </span>
+              </div>
+              <h3 className="book-title">
+                Berkshire Hathaway Letters to Shareholders, 1965–2024
+              </h3>
+            </div>
           </div>
         </section>
 

@@ -368,8 +368,17 @@ export default function Page() {
           <div className="label">About</div>
           <div>
             <p>
-              I grew up in Norway and moved to the United States to study at
-              Columbia University.
+              I competed in{" "}
+              <a
+                className="prose-link"
+                href="https://no.wikipedia.org/wiki/Leonard_Holter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                karate
+              </a>{" "}
+              for Norway, and moved to the United States to study at Columbia
+              University.
             </p>
             <p>
               Today I run{" "}

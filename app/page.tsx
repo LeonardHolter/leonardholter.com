@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 
 const cormorant = Cormorant_Garamond({
@@ -226,6 +227,11 @@ export default function Page() {
           margin: 0 0 32px;
         }
         .book-badge {
+          position: absolute;
+          top: 16px;
+          left: 50%;
+          transform: translateX(-50%);
+          white-space: nowrap;
           font-family: var(--sans);
           font-size: 11px;
           letter-spacing: 0.06em;
@@ -234,7 +240,6 @@ export default function Page() {
           color: var(--ink);
           padding: 4px 12px;
           border-radius: 999px;
-          margin-bottom: 16px;
         }
         .books-grid {
           display: grid;
@@ -242,9 +247,10 @@ export default function Page() {
           gap: 24px;
         }
         .book-card {
+          position: relative;
           background: #ece8dd;
           border-radius: 12px;
-          padding: 40px 28px 32px;
+          padding: 48px 28px 32px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -282,6 +288,18 @@ export default function Page() {
           transition: opacity 200ms ease;
         }
         .book-link:hover { opacity: 0.6; }
+
+        .book-card--link {
+          text-decoration: none;
+          cursor: pointer;
+          transition: transform 200ms ease, box-shadow 200ms ease;
+        }
+        .book-card--link:hover {
+          transform: translateY(-4px);
+        }
+        .book-card--link:hover .book-cover {
+          box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+        }
 
         @media (max-width: 900px) {
           .books-grid {
@@ -412,6 +430,20 @@ export default function Page() {
                 Berkshire Hathaway Letters to Shareholders, 1965–2024
               </h3>
             </div>
+            <Link href="/books/how-to-make-a-few-billion-dollars" className="book-card book-card--link">
+              <div className="book-cover">
+                <Image
+                  src="/books/how-to-make-a-few-billion-dollars.jpg"
+                  alt="How to Make a Few Billion Dollars by Brad Jacobs book cover"
+                  fill
+                  sizes="140px"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <h3 className="book-title">
+                How to Make a Few Billion Dollars — Brad Jacobs
+              </h3>
+            </Link>
           </div>
         </section>
 

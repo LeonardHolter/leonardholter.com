@@ -444,6 +444,20 @@ export default function Page() {
                 How to Make a Few Billion Dollars — Brad Jacobs
               </h3>
             </Link>
+            <Link href="/books/100m-offers" className="book-card book-card--link">
+              <div className="book-cover">
+                <Image
+                  src="/books/100m-offers.jpg"
+                  alt="$100M Offers by Alex Hormozi book cover"
+                  fill
+                  sizes="140px"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <h3 className="book-title">
+                $100M Offers — Alex Hormozi
+              </h3>
+            </Link>
           </div>
         </section>
 

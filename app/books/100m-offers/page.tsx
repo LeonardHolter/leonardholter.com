@@ -46,8 +46,7 @@ export default function BookQuotePage() {
       `}</style>
       <main className={`quote-page ${cormorant.variable}`}>
         <blockquote className="quote-text">
-          &ldquo;How to Make an Offer So Good People Feel Stupid Saying
-          No&rdquo;
+          &ldquo;Make an Offer So Good People Feel Stupid Saying No&rdquo;
         </blockquote>
       </main>
     </>

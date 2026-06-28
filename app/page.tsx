@@ -458,6 +458,20 @@ export default function Page() {
                 $100M Offers — Alex Hormozi
               </h3>
             </Link>
+            <div className="book-card">
+              <div className="book-cover">
+                <Image
+                  src="/books/grinding-it-out.jpg"
+                  alt="Grinding It Out by Ray Kroc book cover"
+                  fill
+                  sizes="140px"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <h3 className="book-title">
+                Grinding It Out — Ray Kroc
+              </h3>
+            </div>
           </div>
         </section>
 

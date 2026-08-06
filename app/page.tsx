@@ -430,6 +430,21 @@ export default function Page() {
                 Berkshire Hathaway Letters to Shareholders, 1965–2024
               </h3>
             </div>
+            <div className="book-card">
+              <div className="book-badge">Currently Reading</div>
+              <div className="book-cover">
+                <Image
+                  src="/books/poor-charlies-almanack.jpg"
+                  alt="Poor Charlie's Almanack by Charles T. Munger book cover"
+                  fill
+                  sizes="140px"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <h3 className="book-title">
+                Poor Charlie&rsquo;s Almanack — Charles T. Munger
+              </h3>
+            </div>
             <Link href="/books/how-to-make-a-few-billion-dollars" className="book-card book-card--link">
               <div className="book-cover">
                 <Image
@@ -456,6 +471,20 @@ export default function Page() {
               </div>
               <h3 className="book-title">
                 $100M Offers — Alex Hormozi
+              </h3>
+            </Link>
+            <Link href="/books/100m-leads" className="book-card book-card--link">
+              <div className="book-cover">
+                <Image
+                  src="/books/100m-leads.jpg"
+                  alt="$100M Leads by Alex Hormozi book cover"
+                  fill
+                  sizes="140px"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <h3 className="book-title">
+                $100M Leads — Alex Hormozi
               </h3>
             </Link>
             <div className="book-card">

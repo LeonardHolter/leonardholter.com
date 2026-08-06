@@ -487,7 +487,7 @@ export default function Page() {
                 $100M Leads — Alex Hormozi
               </h3>
             </Link>
-            <div className="book-card">
+            <Link href="/books/grinding-it-out" className="book-card book-card--link">
               <div className="book-cover">
                 <Image
                   src="/books/grinding-it-out.jpg"
@@ -500,7 +500,7 @@ export default function Page() {
               <h3 className="book-title">
                 Grinding It Out — Ray Kroc
               </h3>
-            </div>
+            </Link>
           </div>
         </section>
 

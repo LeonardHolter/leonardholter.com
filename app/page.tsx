@@ -92,7 +92,7 @@ export default function Page() {
           color: #000;
           background: #fff;
           max-width: 700px;
-          margin: 0 auto;
+          margin: 0;
           padding: 48px 24px 96px;
           line-height: 1.5;
         }

@@ -1,22 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import { Cormorant_Garamond, Inter } from "next/font/google";
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Leonard Holter",
@@ -93,7 +75,7 @@ const jsonLd = {
   nationality: "Norwegian",
   sameAs: [
     "https://www.holterholdings.com/",
-    "https://www.linkedin.com/in/leonard-aleksander-holter-4253b9388/",
+    "https://www.linkedin.com/in/leonardholter/",
   ],
 };
 
@@ -105,418 +87,90 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <style>{`
-        :root {
-          --bg: #f5f1e8;
-          --ink: #2d3f2d;
-          --ink-soft: #5a6a5a;
-          --rule: #d8d2c2;
-          --serif: var(--font-cormorant), "Garamond", "Times New Roman", serif;
-          --sans: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        html, body {
-          background: var(--bg);
-          color: var(--ink);
-          font-family: var(--serif);
-          -webkit-font-smoothing: antialiased;
-          text-rendering: optimizeLegibility;
-        }
-
-        .prose-link {
-          color: inherit;
-          text-decoration: none;
-          border-bottom: 1px solid var(--rule);
-          transition: border-color 200ms ease, color 200ms ease;
-        }
-        .prose-link:hover { border-bottom-color: var(--ink); }
-
-        .page {
-          max-width: 920px;
+        .plain-page {
+          font-family: Georgia, "Times New Roman", Times, serif;
+          color: #000;
+          background: #fff;
+          max-width: 700px;
           margin: 0 auto;
-          padding: 56px 40px 96px;
-        }
-
-        .mark {
-          text-align: center;
-          font-family: var(--serif);
-          font-size: 18px;
-          letter-spacing: 0.18em;
-          text-transform: uppercase;
-          font-weight: 500;
-          padding-bottom: 96px;
-        }
-
-        .hero {
-          display: grid;
-          grid-template-columns: 200px 1fr;
-          gap: 56px;
-          align-items: start;
-          padding-bottom: 64px;
-        }
-
-        .portrait {
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
-          overflow: hidden;
-          background: #ddd;
-          position: relative;
-          flex-shrink: 0;
-        }
-
-        h1 {
-          font-family: var(--serif);
-          font-weight: 400;
-          font-size: clamp(44px, 6.4vw, 76px);
-          line-height: 1.02;
-          letter-spacing: -0.01em;
-          margin: -8px 0 20px;
-        }
-        h1 em {
-          font-style: italic;
-          font-weight: 400;
-        }
-
-        .lede {
-          font-family: var(--serif);
-          font-size: 22px;
+          padding: 48px 24px 96px;
           line-height: 1.5;
-          color: var(--ink-soft);
-          max-width: 56ch;
-          margin: 0;
         }
-
-        .rule {
-          border: 0;
-          border-top: 1px solid var(--rule);
-          margin: 0;
-        }
-
-        .about {
-          padding: 48px 0;
-          display: grid;
-          grid-template-columns: 200px 1fr;
-          gap: 56px;
-        }
-        .about .label {
-          font-family: var(--sans);
-          font-size: 11px;
-          letter-spacing: 0.18em;
-          text-transform: uppercase;
-          color: var(--ink-soft);
-          padding-top: 6px;
-        }
-        .about p {
-          font-family: var(--serif);
-          font-size: 22px;
-          line-height: 1.55;
-          margin: 0 0 18px;
-          max-width: 56ch;
-        }
-        .about p:last-child { margin-bottom: 0; }
-
-        .books-section {
-          padding: 64px 0 48px;
-        }
-        .books-header {
-          font-family: var(--serif);
-          font-weight: 400;
-          font-size: clamp(36px, 5vw, 56px);
-          line-height: 1.1;
-          letter-spacing: -0.01em;
-          margin: 0 0 32px;
-        }
-        .book-badge {
-          position: absolute;
-          top: 16px;
-          left: 50%;
-          transform: translateX(-50%);
-          white-space: nowrap;
-          font-family: var(--sans);
-          font-size: 11px;
-          letter-spacing: 0.06em;
-          text-transform: uppercase;
-          background: #f5dfa0;
-          color: var(--ink);
-          padding: 4px 12px;
-          border-radius: 999px;
-        }
-        .books-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 24px;
-        }
-        .book-card {
-          position: relative;
-          background: #ece8dd;
-          border-radius: 12px;
-          padding: 48px 28px 32px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
-        .book-cover {
-          width: 140px;
-          height: 200px;
-          border-radius: 4px;
-          overflow: hidden;
-          position: relative;
-          margin-bottom: 20px;
-          box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-          flex-shrink: 0;
-        }
-        .book-title {
-          font-family: var(--serif);
-          font-size: 18px;
-          line-height: 1.35;
-          font-weight: 500;
+        .plain-page h1 {
+          font-size: 28px;
+          font-weight: bold;
           margin: 0 0 16px;
-          color: var(--ink);
         }
-        .book-link {
-          font-family: var(--sans);
-          font-size: 13px;
-          letter-spacing: 0.04em;
-          color: var(--ink);
-          text-decoration: none;
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          border-bottom: 1px solid var(--ink);
-          padding-bottom: 1px;
-          transition: opacity 200ms ease;
+        .plain-page h2 {
+          font-size: 22px;
+          font-weight: bold;
+          margin: 40px 0 16px;
         }
-        .book-link:hover { opacity: 0.6; }
-
-        .book-card--link {
-          text-decoration: none;
-          cursor: pointer;
-          transition: transform 200ms ease, box-shadow 200ms ease;
+        .plain-page p {
+          font-size: 17px;
+          margin: 0 0 16px;
         }
-        .book-card--link:hover {
-          transform: translateY(-4px);
+        .plain-page a {
+          color: #00e;
+          text-decoration: underline;
         }
-        .book-card--link:hover .book-cover {
-          box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+        .plain-page a:visited {
+          color: #551a8b;
         }
-
-        @media (max-width: 900px) {
-          .books-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
+        .plain-page ul {
+          margin: 0;
+          padding-left: 24px;
         }
-        @media (max-width: 560px) {
-          .books-grid {
-            grid-template-columns: 1fr;
-          }
-          .books-section { padding: 48px 0 36px; }
-          .book-cover { width: 120px; height: 170px; }
+        .plain-page li {
+          font-size: 17px;
+          margin-bottom: 8px;
         }
-
-        footer {
-          padding-top: 48px;
-          display: flex;
-          justify-content: space-between;
-          align-items: baseline;
-          font-family: var(--sans);
-          font-size: 12px;
-          letter-spacing: 0.08em;
-          color: var(--ink-soft);
-        }
-        footer a { transition: color 200ms ease; }
-        footer a:hover { color: var(--ink); }
-        footer .right a { margin-left: 24px; }
-
-        @media (max-width: 720px) {
-          .page { padding: 36px 24px 72px; }
-          .mark { padding-bottom: 64px; font-size: 15px; }
-          .hero, .about {
-            grid-template-columns: 1fr;
-            gap: 28px;
-          }
-          .portrait { width: 140px; height: 140px; }
-          .lede { font-size: 19px; }
-          .about p { font-size: 19px; }
-          footer { flex-direction: column; gap: 12px; }
-          footer .right a { margin-left: 0; margin-right: 20px; }
+        .plain-page .bio p {
+          margin: 0;
         }
       `}</style>
 
-      <main
-        className={`page ${cormorant.variable} ${inter.variable}`}
-      >
-        <div className="mark">Leonard Holter</div>
+      <main className="plain-page">
+        <h1>Leonard Holter</h1>
 
-        <section className="hero" aria-labelledby="headline">
-          <div className="portrait">
-            <Image
-              src="/leonard-holter.jpg"
-              alt="Leonard Holter, Founder and Chairman of Holter Holdings"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-              sizes="(max-width: 720px) 140px, 200px"
-            />
-          </div>
-          <div>
-            <h1 id="headline">
-              Buying great
-              <br />
-              businesses, <em>quietly</em>.
-            </h1>
-            <p className="lede">
-              Founder &amp; Chairman of{" "}
-              <a
-                className="prose-link"
-                href="https://www.holterholdings.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Holter Holdings
-              </a>
-              .
-            </p>
-          </div>
-        </section>
+        <p>
+          <a
+            href="https://www.linkedin.com/in/leonardholter/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>{" "}
+          &middot;{" "}
+          <a href="mailto:leonard@columbia.edu">Email</a>
+        </p>
 
-        <hr className="rule" />
+        <h2>About</h2>
 
-        <section className="about" aria-label="About Leonard Holter">
-          <div className="label">About</div>
-          <div>
-            <p>
-              I competed in{" "}
-              <a
-                className="prose-link"
-                href="https://no.wikipedia.org/wiki/Leonard_Holter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                karate
-              </a>{" "}
-              for Norway, and moved to the United States to study at Columbia
-              University.
-            </p>
-            <p>
-              Today I run{" "}
-              <a
-                className="prose-link"
-                href="https://www.holterholdings.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Holter Holdings
-              </a>
-              , where we acquire small, profitable businesses and hold them for
-              the long term.
-            </p>
-          </div>
-        </section>
-
-        <hr className="rule" />
-
-        <section className="books-section" aria-label="Recent Books">
-          <h2 className="books-header">Recent Books</h2>
-          <div className="books-grid">
-            <div className="book-card">
-              <div className="book-badge">Currently Reading</div>
-              <div className="book-cover" style={{ background: "#1a2332", display: "flex", alignItems: "center", justifyContent: "center", padding: 12 }}>
-                <span style={{ color: "#c4a44a", fontFamily: "var(--serif)", fontSize: 13, lineHeight: 1.3, textAlign: "center", fontWeight: 500 }}>
-                  Berkshire Hathaway<br />Letters to<br />Shareholders<br /><span style={{ fontSize: 10, opacity: 0.7 }}>1965–2024</span>
-                </span>
-              </div>
-              <h3 className="book-title">
-                Berkshire Hathaway Letters to Shareholders, 1965–2024
-              </h3>
-            </div>
-            <div className="book-card">
-              <div className="book-badge">Currently Reading</div>
-              <div className="book-cover">
-                <Image
-                  src="/books/poor-charlies-almanack.jpg"
-                  alt="Poor Charlie's Almanack by Charles T. Munger book cover"
-                  fill
-                  sizes="140px"
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <h3 className="book-title">
-                Poor Charlie&rsquo;s Almanack — Charles T. Munger
-              </h3>
-            </div>
-            <Link href="/books/how-to-make-a-few-billion-dollars" className="book-card book-card--link">
-              <div className="book-cover">
-                <Image
-                  src="/books/how-to-make-a-few-billion-dollars.jpg"
-                  alt="How to Make a Few Billion Dollars by Brad Jacobs book cover"
-                  fill
-                  sizes="140px"
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <h3 className="book-title">
-                How to Make a Few Billion Dollars — Brad Jacobs
-              </h3>
-            </Link>
-            <Link href="/books/100m-offers" className="book-card book-card--link">
-              <div className="book-cover">
-                <Image
-                  src="/books/100m-offers.jpg"
-                  alt="$100M Offers by Alex Hormozi book cover"
-                  fill
-                  sizes="140px"
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <h3 className="book-title">
-                $100M Offers — Alex Hormozi
-              </h3>
-            </Link>
-            <Link href="/books/100m-leads" className="book-card book-card--link">
-              <div className="book-cover">
-                <Image
-                  src="/books/100m-leads.jpg"
-                  alt="$100M Leads by Alex Hormozi book cover"
-                  fill
-                  sizes="140px"
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <h3 className="book-title">
-                $100M Leads — Alex Hormozi
-              </h3>
-            </Link>
-            <Link href="/books/grinding-it-out" className="book-card book-card--link">
-              <div className="book-cover">
-                <Image
-                  src="/books/grinding-it-out.jpg"
-                  alt="Grinding It Out by Ray Kroc book cover"
-                  fill
-                  sizes="140px"
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <h3 className="book-title">
-                Grinding It Out — Ray Kroc
-              </h3>
-            </Link>
-          </div>
-        </section>
-
-        <footer>
-          <div>© 2026 Leonard Holter</div>
-          <div className="right">
+        <div className="bio">
+          <p>Grew up in Norway.</p>
+          <p>
+            Competed in{" "}
             <a
-              href="https://www.linkedin.com/in/leonard-aleksander-holter-4253b9388/"
+              href="https://no.wikipedia.org/wiki/Leonard_Holter"
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn
-            </a>
-            <a href="mailto:leonard@holterholdings.com">Email</a>
-          </div>
-        </footer>
+              karate
+            </a>{" "}
+            internationally for Norway.
+          </p>
+          <p>Moved to the United States to study at Columbia University.</p>
+        </div>
+
+        <h2>Books I Recommend</h2>
+        <ul>
+          <li>Letters to Shareholders &mdash; Warren Buffett</li>
+          <li>Poor Charlie&rsquo;s Almanack &mdash; Charles T. Munger</li>
+          <li>The Odyssey &mdash; Homer</li>
+          <li>Inferno &mdash; Dante Alighieri</li>
+          <li>The Bible</li>
+        </ul>
       </main>
     </>
   );

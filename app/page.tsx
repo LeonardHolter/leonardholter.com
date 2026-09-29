@@ -149,6 +149,19 @@ export default function Page() {
 
         <div className="bio">
           <p>Grew up in Norway.</p>
+          <p>Sold cookies at 5.</p>
+          <p>Did dropshipping at 10.</p>
+          <p>
+            Started the largest team-based{" "}
+            <a
+              href="https://www.stord24.no/nyhende/n/93vwzq/selevik-skule-heilt-til-topps-i-mattekonkurranse"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              math competition
+            </a>{" "}
+            in the Nordics.
+          </p>
           <p>
             Competed in{" "}
             <a

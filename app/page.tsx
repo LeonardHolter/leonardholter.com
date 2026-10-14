@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Leonard Holter",
@@ -128,6 +129,10 @@ export default function Page() {
         .plain-page .bio p {
           margin: 0;
         }
+        .plain-page .footer-link {
+          margin-top: 48px;
+          font-size: 14px;
+        }
       `}</style>
 
       <main className="plain-page">
@@ -184,6 +189,10 @@ export default function Page() {
           <li>Inferno &mdash; Dante Alighieri</li>
           <li>The Bible</li>
         </ul>
+
+        <p className="footer-link">
+          <Link href="/mental-models">Mental models</Link>
+        </p>
       </main>
     </>
   );

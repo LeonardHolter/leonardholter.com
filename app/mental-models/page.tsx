@@ -18,22 +18,22 @@ export default function Page() {
         }
         .plain-page {
           min-height: 100vh;
-          font-family: Georgia, "Times New Roman", Times, serif;
+          font-family: "Times New Roman", Times, serif;
           color: #000;
           background: #fff;
           max-width: 700px;
           margin: 0;
-          padding: 48px 24px 96px;
-          line-height: 1.5;
+          font-size: 15px;
+          padding: 16px 24px 64px;
+          line-height: 1.15;
         }
         .plain-page h1 {
-          font-size: 28px;
+          font-size: 18px;
           font-weight: bold;
-          margin: 0 0 16px;
+          margin: 0 0 14px;
         }
         .plain-page p {
-          font-size: 17px;
-          margin: 0 0 16px;
+          margin: 0 0 14px;
         }
         .plain-page a {
           color: #00e;
@@ -43,16 +43,14 @@ export default function Page() {
           color: #551a8b;
         }
         .plain-page ul {
-          margin: 0;
-          padding-left: 24px;
+          margin: 0 0 14px;
+          padding-left: 40px;
         }
         .plain-page li {
-          font-size: 17px;
-          margin-bottom: 8px;
+          margin: 0;
         }
         .plain-page .footer-link {
-          margin-top: 48px;
-          font-size: 14px;
+          margin-top: 32px;
         }
       `}</style>
 

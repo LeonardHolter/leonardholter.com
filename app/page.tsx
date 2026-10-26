@@ -3,54 +3,23 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Leonard Holter",
-  description:
-    "Leonard Holter is the Founder & Chairman of Holter Holdings, acquiring small, profitable businesses for the long term. Grew up in Norway, studied at Columbia University.",
-  keywords: [
-    "Leonard Holter",
-    "Holter Holdings",
-    "Leonard Aleksander Holter",
-    "Holter Holdings founder",
-    "business acquisition",
-    "Columbia University",
-    "Norway",
-  ],
-  authors: [{ name: "Leonard Holter" }],
-  creator: "Leonard Holter",
+  description: "Leonard Holter",
   openGraph: {
     type: "profile",
     title: "Leonard Holter",
-    description:
-      "Founder & Chairman of Holter Holdings. Buying great businesses, quietly.",
+    description: "Leonard Holter",
     url: "https://leonardholter.com",
     siteName: "Leonard Holter",
-    images: [
-      {
-        url: "/leonard-holter.jpg",
-        width: 800,
-        height: 800,
-        alt: "Leonard Holter",
-      },
-    ],
     firstName: "Leonard",
     lastName: "Holter",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Leonard Holter",
-    description:
-      "Founder & Chairman of Holter Holdings. Buying great businesses, quietly.",
-    images: ["/leonard-holter.jpg"],
+    description: "Leonard Holter",
   },
   alternates: {
     canonical: "https://leonardholter.com",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
   },
 };
 
@@ -59,24 +28,10 @@ const jsonLd = {
   "@type": "Person",
   name: "Leonard Holter",
   alternateName: "Leonard Aleksander Holter",
-  description:
-    "Founder and Chairman of Holter Holdings, acquiring small profitable businesses for the long term.",
   url: "https://leonardholter.com",
-  image: "https://leonardholter.com/leonard-holter.jpg",
-  jobTitle: "Founder & Chairman",
-  worksFor: {
-    "@type": "Organization",
-    name: "Holter Holdings",
-    url: "https://www.holterholdings.com/",
-  },
-  alumniOf: {
-    "@type": "CollegeOrUniversity",
-    name: "Columbia University",
-  },
-  nationality: "Norwegian",
   sameAs: [
-    "https://www.holterholdings.com/",
     "https://www.linkedin.com/in/leonardholter/",
+    "https://no.wikipedia.org/wiki/Leonard_Holter",
   ],
 };
 
@@ -89,27 +44,27 @@ export default function Page() {
       />
       <style>{`
         .plain-page {
-          font-family: Georgia, "Times New Roman", Times, serif;
+          font-family: "Times New Roman", Times, serif;
+          font-size: 15px;
           color: #000;
           background: #fff;
           max-width: 700px;
           margin: 0;
-          padding: 48px 24px 96px;
-          line-height: 1.5;
+          padding: 16px 24px 64px;
+          line-height: 1.15;
         }
         .plain-page h1 {
-          font-size: 28px;
+          font-size: 18px;
           font-weight: bold;
-          margin: 0 0 16px;
+          margin: 0 0 14px;
         }
         .plain-page h2 {
-          font-size: 22px;
+          font-size: 17px;
           font-weight: bold;
-          margin: 40px 0 16px;
+          margin: 20px 0 14px;
         }
         .plain-page p {
-          font-size: 17px;
-          margin: 0 0 16px;
+          margin: 0 0 14px;
         }
         .plain-page a {
           color: #00e;
@@ -119,19 +74,17 @@ export default function Page() {
           color: #551a8b;
         }
         .plain-page ul {
-          margin: 0;
-          padding-left: 24px;
+          margin: 0 0 14px;
+          padding-left: 40px;
         }
         .plain-page li {
-          font-size: 17px;
-          margin-bottom: 8px;
+          margin: 0;
         }
         .plain-page .bio p {
           margin: 0;
         }
         .plain-page .footer-link {
-          margin-top: 48px;
-          font-size: 14px;
+          margin-top: 32px;
         }
       `}</style>
 

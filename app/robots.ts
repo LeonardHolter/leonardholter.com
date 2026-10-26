@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.holterholdings.com/sitemap.xml",
+    sitemap: "https://leonardholter.com/sitemap.xml",
   };
 }

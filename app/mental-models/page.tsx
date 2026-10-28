@@ -60,6 +60,7 @@ export default function Page() {
         <ul>
           <li>Proof by contradiction</li>
           <li>What incentives are involved</li>
+          <li>Reciprocation tendency</li>
         </ul>
 
         <p className="footer-link">

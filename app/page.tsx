@@ -143,6 +143,8 @@ export default function Page() {
           <li>The Bible</li>
         </ul>
 
+        <p>Biggest Michael Jackson fan.</p>
+
         <p className="footer-link">
           <Link href="/mental-models">Mental models</Link>
         </p>
